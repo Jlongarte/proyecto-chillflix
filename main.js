@@ -59,7 +59,7 @@ const printPhotos = (photos, title) => {
             .map((photo) => {
               const imageUrl = photo.backdrop_path
                 ? `https://image.tmdb.org/t/p/w500${photo.backdrop_path}`
-                : "https://via.placeholder.com/500x281?text=No+Image";
+                : "https://i.sstatic.net/y9DpT.jpg/w500";
               const videoUrl = `https://www.themoviedb.org/tv/${photo.id}`;
               return `
               <li>
@@ -151,3 +151,4 @@ document.querySelector("#searchBtn").addEventListener("click", () => {
   getPhotos(value, "Resultados de Búsqueda");
   input.value = "";
 });
+
