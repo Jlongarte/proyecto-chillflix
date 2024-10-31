@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Qwitcher+Grypen:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--texto);
+}
+
+:root {
+  --background-color: #1f2833;
+  --second-background: #0b0c10;
+  --texto: #f0f0f0;
+  --accent: #66fcf1;
+  --accent-hover: #45a29e;
+  --gray: #c5c6c7;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+main {
+  background-color: var(--background-color);
+  padding: 8px;
+  height: auto;
+}
+.no-results-message {
+  text-align: center;
+  padding: 40px;
+}
+
+.no-results-message > h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+}
+
+p > span > a {
+  color: var(--accent);
+}
+
+p > span > a:hover {
+  color: var(--accent-hover);
+}
+
+/* Media query para dispositivos móviles */
+
+@media (max-width: 768px) {
+  .no-results-message > h2 {
+    font-size: 2rem;
+  }
+}

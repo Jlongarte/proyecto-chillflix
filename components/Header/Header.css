@@ -1,0 +1,58 @@
+header {
+  padding: 22px;
+  background-color: var(--second-background);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+#search-container {
+  display: flex;
+  gap: 10px;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  background-color: var(--second-background);
+  font-family: "Courier New", Courier, monospace;
+}
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--second-background);
+  color: var(--gray);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Media query para dispositivos móviles */
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  input[type="text"] {
+    width: 200px;
+  }
+}

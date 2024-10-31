@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background-color: var(--second-background);
+  padding: 20px;
+}
+
+nav > ul > li:hover {
+  color: var(--accent-hover);
+  cursor: pointer;
+}
