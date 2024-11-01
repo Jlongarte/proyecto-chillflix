@@ -22,7 +22,9 @@ const getPhotos = async (keyword, title) => {
     }`
   );
   const results = await data.json();
-  const photos = results.results;
+
+  const photos = results.results.filter((photo) => photo.backdrop_path);
+
   printPhotos(photos, title);
 };
 
@@ -57,9 +59,7 @@ const printPhotos = (photos, title) => {
         <ul class="mylist-slider-content" id="mylist-slider-content">
           ${photos
             .map((photo) => {
-              const imageUrl = photo.backdrop_path
-                ? `https://image.tmdb.org/t/p/w500${photo.backdrop_path}`
-                : "https://i.sstatic.net/y9DpT.jpg/w500";
+              const imageUrl = `https://image.tmdb.org/t/p/w500${photo.backdrop_path}`;
               const videoUrl = `https://www.themoviedb.org/tv/${photo.id}`;
               return `
               <li>
@@ -151,4 +151,3 @@ document.querySelector("#searchBtn").addEventListener("click", () => {
   getPhotos(value, "Resultados de Búsqueda");
   input.value = "";
 });
-
